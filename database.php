@@ -18,14 +18,15 @@ if ($mysqli->connect_errno) {
 
 
 function get_capabilities($mysqli)  {
-    $sql ="SELECT * FROM capabilities";
+//     $sql ="SELECT * FROM capabilities";
     
-    $result = $mysqli->query($sql);
-    $rows = array();
-    while($row = $result->fetch_assoc()) {
-    $rows[] = $row;
-    }
-return $rows;
+//     $result = $mysqli->query($sql);
+//     $rows = array();
+//     while($row = $result->fetch_assoc()) {
+//     $rows[] = $row;
+//     }
+// return $rows;
+return get_all_from_table($mysqli, "capabilities");
 
     
 }
@@ -36,28 +37,32 @@ return $mysqli;
 
 function get_scenarios($mysqli) {
 
-    $sql ="SELECT * FROM scenarios";
+//     $sql ="SELECT * FROM scenarios";
     
-    $result = $mysqli->query($sql);
-    $rows = array();
-    while($row = $result->fetch_assoc()) {
-    $rows[] = $row;
-    }
-return $rows;
+//     $result = $mysqli->query($sql);
+//     $rows = array();
+//     while($row = $result->fetch_assoc()) {
+//     $rows[] = $row;
+//     }
+// return $rows;
+
+return get_all_from_table($mysqli, "scenarios");
 
     
 }
 
 function get_departments($mysqli) {
 
-    $sql ="SELECT * FROM departments";
+//     $sql ="SELECT * FROM departments";
     
-    $result = $mysqli->query($sql);
-    $rows = array();
-    while($row = $result->fetch_assoc()) {
-    $rows[] = $row;
-    }
-return $rows;
+//     $result = $mysqli->query($sql);
+//     $rows = array();
+//     while($row = $result->fetch_assoc()) {
+//     $rows[] = $row;
+//     }
+// return $rows;
+
+return get_all_from_table($mysqli, "departments");
 
     
 }
@@ -65,7 +70,24 @@ return $rows;
 
 function get_swimlanes($mysqli) {
 
-    $sql ="SELECT * FROM departments";
+//     $sql ="SELECT * FROM swimlanes";
+    
+//     $result = $mysqli->query($sql);
+//     $rows = array();
+//     while($row = $result->fetch_assoc()) {
+//     $rows[] = $row;
+//     }
+// return $rows;
+return get_all_from_table($mysqli, "swimlanes");
+
+    
+}
+
+
+function get_all_from_table($mysqli, $table_name){
+
+
+    $sql ="SELECT * FROM $table_name";
     
     $result = $mysqli->query($sql);
     $rows = array();
@@ -74,7 +96,6 @@ function get_swimlanes($mysqli) {
     }
 return $rows;
 
-    
 }
 
 

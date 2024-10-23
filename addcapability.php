@@ -7,6 +7,7 @@ $departments=get_departments( $mysqli);
 $swimlanes=get_swimlanes($mysqli);
 
 
+
 ?>
 
 <html>
@@ -31,9 +32,9 @@ $swimlanes=get_swimlanes($mysqli);
 
 <h3>Choose fase</h3>
 
-<?php foreach ($departments as $department): ?>
-    <input type="checkbox" id="swimlane-<?php echo $swimlanes["swimlane_id"]?>" name="swimlane[]" value="<?php echo $swimlanes["swimlane_id"]?>">
-    <label for="swimlane-<?php echo $swimlanes["swimlane_id"]?>"><?php echo $swimlanes["swimlane_name"]?></label><br>
+<?php foreach ($swimlanes as $swimlane): ?>
+    <input type="checkbox" id="swimlane-<?php echo $swimlane["swimlane_id"]?>" name="swimlane[]" value="<?php echo $swimlane["swimlane_id"]?>">
+    <label for="swimlane-<?php echo $swimlane["swimlane_id"]?>"><?php echo $swimlane["swimlane_name"]?></label><br>
 <?php endforeach ?>
 <h3>2.Name capability</h3>
 <input type="text" id="Capability" name="Capability" Placeholder="Enter Capability name" ><br>
