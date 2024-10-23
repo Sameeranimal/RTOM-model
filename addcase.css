@@ -1,0 +1,103 @@
+
+  body{
+    background-image: url(yellow.png);
+
+  }
+
+  
+
+button.btn1{
+    background-image: linear-gradient(to right, rgba(169,204,238,255) 0%, #F0F8FF  51%, rgba(169,204,238,255)  100%);
+      margin: 10px;
+      padding: 15px 34px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;            
+    
+      border-radius: 2px;
+      border-color: #fff;
+      display: block;
+      position: fixed;
+      bottom: 20;
+      right: 20;
+  }
+
+
+    .btn1:hover {
+      
+      background-position: right center; 
+      color: #fff;
+      text-decoration: none;
+    }   
+    
+
+
+    .intro{
+        font-size: medium;
+        text-align: center; 
+        color: #1c5886;
+    }
+    
+form .form1{
+
+
+color: #1c5886;
+position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+
+form .form2{
+
+    color: #1c5886;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  
+    
+   
+    }
+
+    form .case{
+        color: #1c5886;
+        position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center; 
+    }
+form .case input{
+    color: #1c5886; 
+    background-color: #fff;
+    
+
+    
+}
+
+ 
+
+form .case ::-webkit-input-placeholder{
+    color: #1c5886;
+}
+
+
+button.btn1{
+  background-image: linear-gradient(to right, rgba(169,204,238,255) 0%, #F0F8FF  51%, rgba(169,204,238,255)  100%);
+    margin: 10px;
+    padding: 15px 34px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #1c5886;            
+  
+    border-radius: 2px;
+    border-color: #fff;
+    display: block;
+    position: fixed;
+    bottom: 20;
+    right: 300px;
+}
+

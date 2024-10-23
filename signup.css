@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+  }
+
+
+body {
+    text-align: center;
+    height: 100%;
+    background-image: url(theme.jpg);
+  }
+
+  form{
+    display: inline-block;
+  }
+
+           
+  .btn-grad {
+    background-image: linear-gradient(to right, #283048 0%, #859398  51%, #283048  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+  
+  button {
+    all: unset;
+  }
+  
+  button:focus {
+    outline: revert;
+  }
+ 
+  form{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    font-style: oblique;
+    color: #283048;
+  }

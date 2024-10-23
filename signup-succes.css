@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+  }
+
+
+body {
+    text-align: center;
+    height: 100%;
+    background-image: url(theme.jpg);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    font-style: oblique;
+    color: #283048;
+  }
+
+  a{
+color: aliceblue;
+  }
+
