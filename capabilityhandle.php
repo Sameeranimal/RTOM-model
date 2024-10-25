@@ -8,8 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST)) {
     // var_dump($_POST);
     
     $capabilityName = trim($_POST['Capability']);
-    $swimlaneName = trim($_POST['Swimlane']);
-
     
     if (empty($capabilityName)) {
         die("Capability name cannot be empty.");
@@ -49,9 +47,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST)) {
         } else {
             echo "No departments selected.";
         }
+        if (isset($_POST['swimlane']) && is_array($_POST['swimlane'])) {
+            foreach ($_POST['swimlane'] as $swimlaneId) {
+                if (is_numeric($swimlaneId)) {
+                    $stmtSwimlane = $mysqli->prepare("INSERT INTO swimlane_capability (capability_id, swimlane_id) VALUES (?, ?)");
+                    if ($stmtSwimlane) {
+                        $stmtSwimlane->bind_param("ii", $capabilityId, $swimlaneId);
+                        
+                        if (!$stmtSwimlane->execute()) {
+                            echo "Error inserting swimlane capability: " . $stmtSwimlane->error; 
+                            die;
+                        }
+                        $stmtSwimlane->close();
+                    } else {
+                        echo "Failed to prepare swimlane capability statement: " . $mysqli->error;
+                    }
+                } else {
+                    echo "Invalid swimlane ID.";
+                }
+            }
+        } else {
+            echo "No swimlanes selected.";
+        }
 
-        header("Location: RTOM.php?success=1");
-        exit;
 
     } else {
         if ($mysqli->errno === 1062) {
@@ -61,8 +79,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST)) {
         }
     }
 
+   
+    
+    header("Location: RTOM.php?success=1");
+
+    
+    
+
+
+
+
     $stmt->close();
 } else {
     echo "Invalid request method.";
 }
-?>
+
+
+
+
+
