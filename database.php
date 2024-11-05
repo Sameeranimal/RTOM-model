@@ -83,6 +83,24 @@ return get_all_from_table($mysqli, "swimlanes");
     
 }
 
+function get_capabilities_by_department_and_swimlane($mysqli, $departmentId, $swimlaneId) {
+    $sql = "SELECT c.* from capabilities AS c JOIN department_capabilities AS dc ON dc.capability_id = c.capability_id JOIN swimlane_capability AS sc ON sc.capability_id = c.capability_id WHERE dc.department_id = ? AND sc.swimlane_id = ?";
+
+
+
+    $statement = $mysqli->prepare($sql);
+    $statement->bind_param("ii", $departmentId, $swimlaneId);
+    $rows = array();
+    if ($statement->execute()) {
+        $result = $statement->get_result();
+    
+        while($row = $result->fetch_assoc()) {
+            $rows[] = $row;
+        }
+    }
+    return $rows;
+}
+
 
 function get_all_from_table($mysqli, $table_name){
 
