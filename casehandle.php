@@ -5,22 +5,26 @@ INSERT INTO  scenario_capabilities(direct) VALUES (NULL, '?', FALSE)";
 if (!empty($_POST)){               
     $directIndirectRelation = [];
 
+if (isset($_POST ['capability_direct'])){
+
     foreach ($_POST['capability_direct'] as $value) {
 
         $directIndirectRelation[$value]=true;
+    }
         
-
+  
 
     }
+if (isset($_POST ['capability_indirect'])){
+
     foreach ($_POST['capability_indirect'] as $value) {
 
         $directIndirectRelation[$value]=false;
-        
+    }
 
 
     }
-    var_dump($directIndirectRelation);
-    die;
+    
 }
 
 $sql = "INSERT INTO scenarios (scenario_name)
