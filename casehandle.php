@@ -1,7 +1,6 @@
 <?php
 $mysqli = require __DIR__ . "/database.php";
-$sql="INSERT INTO scenario_capabilities(direct) VALUES (NULL, '?', TRUE)
-INSERT INTO  scenario_capabilities(direct) VALUES (NULL, '?', FALSE)";
+
 if (!empty($_POST)){               
     $directIndirectRelation = [];
 
@@ -15,6 +14,7 @@ if (isset($_POST ['capability_direct'])){
   
 
     }
+
 if (isset($_POST ['capability_indirect'])){
 
     foreach ($_POST['capability_indirect'] as $value) {
@@ -35,13 +35,38 @@ $stmt = $mysqli->stmt_init();
 if ( ! $stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
-var_dump($_POST);
+
 
 $stmt->bind_param("s",
                   
                   $_POST["Case"]);
 
 if ($stmt->execute()) {
+    $scenario_id = $stmt->insert_id; 
+
+$sql = "INSERT INTO scenario_capabilities(scenario_id, capability_id, direct) VALUES (?,?,?);"; 
+
+$stmt = $mysqli->stmt_init();
+
+if ( ! $stmt->prepare($sql)) {
+    die("SQL error: " . $mysqli->error);
+}
+
+// var_dump($directIndirectRelation);
+// die;
+
+
+
+                  foreach ($directIndirectRelation as $key => $value) {
+                    $stmt->bind_param("iii", $scenario_id, $key, $value);
+                   if (!$stmt->execute()){
+                    if ($mysqli->errno === 1062) {
+                        die("Case already exists in RTOM");
+                    } else {
+                        die($mysqli->error . " " . $mysqli->errno);
+                    }
+                   }
+                }
 
     header("Location: RTOM.php");
     exit;
