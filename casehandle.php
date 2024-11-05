@@ -1,5 +1,27 @@
 <?php
 $mysqli = require __DIR__ . "/database.php";
+$sql="INSERT INTO scenario_capabilities(direct) VALUES (NULL, '?', TRUE)
+INSERT INTO  scenario_capabilities(direct) VALUES (NULL, '?', FALSE)";
+if (!empty($_POST)){               
+    $directIndirectRelation = [];
+
+    foreach ($_POST['capability_direct'] as $value) {
+
+        $directIndirectRelation[$value]=true;
+        
+
+
+    }
+    foreach ($_POST['capability_indirect'] as $value) {
+
+        $directIndirectRelation[$value]=false;
+        
+
+
+    }
+    var_dump($directIndirectRelation);
+    die;
+}
 
 $sql = "INSERT INTO scenarios (scenario_name)
         VALUES (?)";
@@ -10,11 +32,11 @@ if ( ! $stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
 var_dump($_POST);
+
 $stmt->bind_param("s",
                   
                   $_POST["Case"]);
 
-if (!empty($_POST)){               
 if ($stmt->execute()) {
 
     header("Location: RTOM.php");
@@ -28,4 +50,6 @@ if ($stmt->execute()) {
         die($mysqli->error . " " . $mysqli->errno);
     }
 }
-}
+
+
+

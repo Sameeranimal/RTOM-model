@@ -30,7 +30,7 @@ $capabilities=get_capabilities( $mysqli);
 
     <h2>Directly influenced</h2> 
     <?php foreach ($capabilities as $capability): ?>
-            <input type="checkbox" id="capability-<?php echo $capability["capability_id"]?>" name="capability-<?php echo $capability["capability_id"]?>" value="<?php echo $capability["capability_name"]?>">
+            <input type="checkbox" id="capability-<?php echo $capability["capability_id"]?>" name="capability_direct[]"  value="<?php echo $capability["capability_id"]?>">
             <label for="capability-<?php echo $capability["capability_id"]?>"><?php echo $capability["capability_name"]?></label><br>  
     <?php endforeach ?>
 
@@ -46,7 +46,7 @@ $capabilities=get_capabilities( $mysqli);
     <h2>Indirectly influenced</h2>
 
     <?php foreach ($capabilities as $capability): ?>
-            <input type="checkbox" id="capability-<?php echo $capability["capability_id"]?>" name="capability-<?php echo $capability["capability_id"]?>" value="<?php echo $capability["capability_name"]?>">
+            <input type="checkbox" id="capability-<?php echo $capability["capability_id"]?>" name="capability_indirect[]" value="<?php echo $capability["capability_id"]?>">
             <label for="capability-<?php echo $capability["capability_id"]?>"><?php echo $capability["capability_name"]?></label><br>  
     <?php endforeach ?>
   
