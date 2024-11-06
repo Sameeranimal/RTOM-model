@@ -21,17 +21,19 @@ $swimlanes = get_swimlanes($mysqli);
             font-size: auto;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: center;
-            padding: 8px;
+
+        
         }
 
         .grid-cell {
             display: grid;
             grid-template-columns: auto auto;
-            gap: 8px; 
             font-size:12px;
+            gap: 5px; 
+            
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: center;
-            
+            border: 1px solid rgba(169,204,238,255);
 
         }
     </style>
@@ -86,6 +88,8 @@ foreach ($departments as $department) {
 ?>
 
 
+
+        
 <button class="btn1" onclick="history.back()">Go Back</button>
 
 <div class="sidenav">
