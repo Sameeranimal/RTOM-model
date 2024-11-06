@@ -4,23 +4,14 @@
     color: black;
     
   }
-  
-  .block {
-      width: 13vw;
-      height: 13vh;
-      box-shadow: 0px 0px 0px 6px rgba(169,204,238,255);
-      color: white;
-      text-align: center;
-    }
-  
+ 
     
     .blockLogo {
       width: 13vw;
       height: 13vh;
       box-shadow: 0px 0px 0px 6px rgba(169,204,238,255);
-      color: white;
       text-align: center;
-      margin-top: 1em;
+      /* margin-top: 1em; */
     }
 
     .blockLogo .mid
@@ -34,19 +25,14 @@
     width: 13vw;
     height: 13vh;
     box-shadow: 0px 0px 0px 6px rgba(169,204,238,255);
-    color: white;
     text-align: center;
+    color: black;
+    
   }  
   
-  .wit {
-    background-color: white !important;
-  }
+ 
   
-  .info {
-    display: flex;
-    gap: 17.5px;
-    flex-direction: row;
-  }
+
   
   .blockInfo {
     width: 6vw;
@@ -61,13 +47,7 @@
   
   
   
-  .half {
-    height: 3.6vh;
-  }
-  
-  .half2 {
-    height: 4.2vh;
-  }
+ 
   
   .blockRegie {
     width: 13vw;
@@ -77,73 +57,10 @@
     margin-top: 32px;
   }
   
-  .blockService {
-    width: 13vw;
-    height: 13vh;
-    box-shadow: 0px 0px 0px 6px rgb(126,178,230,255);
-    text-align: center;
-  }
   
-  .blockHub {
-    width: 13vw;
-    height: 27vh;
-    box-shadow: 0px 0px 0px 6px rgb(31,95,160,255);
-    text-align: center;
-  }
   
-  .blockInt {
-    width: 13vw;
-    height: 21vh;
-    box-shadow: 0px 0px 0px 6px rgb(20,63,106,255);
-    text-align: center;
-  }
   
-  .een {
-    box-shadow: 0 0 0 2px rgb(169,204,238,255), 8px 8px 0 0 rgb(169,204,238,255);
-  }
-  
-  .twee {
-    box-shadow: 0 0 0 2px rgb(126,178,230,255), 8px 8px 0 0 rgb(126,178,230,255);
-  }
-  
-  .drie {
-    box-shadow: 0 0 0 2px rgb(31,95,160,255), 8px 8px 0 0 rgb(31,95,160,255);
-  }
-  
-  .vier {
-    box-shadow: 0 0 0 2px rgb(20,63,106,255), 8px 8px 0 0 rgb(20,63,106,255);
-  }
-  
-  .blokTwee {
-    display: flex;
-    column-gap: 1vw;
-    font-size: 0.6rem;
-  }
-  
-  .blockGeen {
-    width: 6vw;
-      height: 6vh;
-      background-color: blue;
-      color: white;
-      text-align: center;
-  }
-  
-  .probleem1 {
-    margin-top: 32px;
-    cursor: pointer;
-  }
-  
-  .probleem2{
-    cursor: pointer;
-  }
-  
-  .probleem3{
-    cursor: pointer;
-  }
-  
-  .probleem4{
-    cursor: pointer;
-  }
+ 
   
   .mid {
     display: flex;
@@ -152,9 +69,6 @@
     font-weight: bold;
   }
   
-  .reset {
-    cursor: pointer;
-  }
   #overlay {
     position: fixed;
     display: none;
@@ -199,17 +113,7 @@
   }
   
   @media only screen and (max-width: 1214px){
-    .blokTwee {
-      font-size: 0.4em;
-    }
-  
-    .block{
-      font-size: 0.8em;
-    }
-  
-    .blockInt {
-      font-size: 0.8em;
-    }
+    
   
     .blockBoven {
       font-size: 0.8em;
@@ -217,28 +121,7 @@
   }
   
  
-  .description-container {
-    display: none;
-  }
-  
-  
-  .description-container.show {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .description-textarea {
-    margin-bottom: 5px;
-  }
-  
-  .save-description-btn {
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
+ 
   
   
   
@@ -252,12 +135,7 @@
     margin-right: 20px;
   }
   
-  .main1 {
-    background-color: rgb(255, 255, 255);
-    height: 70vh;
-    width: 100vw;
-    position: relative;
-  }
+ 
   
   
   
@@ -314,12 +192,7 @@
       color: #fff;
     }
     
-    .main {
-      margin-left: 140px; /* Same width as the sidebar + left position in px */
-      font-size: 28px; /* Increased text to enable scrolling */
-      padding: 0px 10px;
-    }
-    
+   
     @media screen and (max-height: 450px) {
       .sidenav {padding-top: 15px;}
       .sidenav a {font-size: 18px;}

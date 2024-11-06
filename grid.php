@@ -10,17 +10,28 @@ $departments = get_departments($mysqli);
 $swimlanes = get_swimlanes($mysqli);
 
 ?>
+<section class="info">
 
     <style>
         .grid-container {
             display: grid;
-            grid-template-columns: <?php foreach ($swimlanes as $_): ?>auto <?php endforeach; ?>;
-            grid-template-rows: <?php foreach ($departments as $_): ?>auto <?php endforeach; ?>;
-            gap: 10px; 
+            grid-template-columns: auto <?php foreach ($swimlanes as $_): ?>auto <?php endforeach; ?>;
+            grid-template-rows: auto <?php foreach ($departments as $_): ?>auto <?php endforeach; ?>;
+            gap: 5px; 
             font-size: auto;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             text-align: center;
-            padding: 10px;
+            padding: 8px;
+        }
+
+        .grid-cell {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 8px; 
+            font-size:12px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            
 
         }
     </style>
@@ -30,17 +41,35 @@ $swimlanes = get_swimlanes($mysqli);
 
 
 
-?><div class="grid-container"><?php
+?><div class="grid-container">
+    
+        <div>     <a href="index.php"><img src="morphe.png" class="blockLogo"></a>   
+        </div>
+    <?php
+
+foreach ($swimlanes as $swimlane){
+    ?>
+    <div class="blockBoven mid"><?= $swimlane['swimlane_name'] ?></div>
+<?php
+}
+
+    ?>
+    
+    
+    <?php
 
 foreach ($departments as $department) {
+    ?>
+    <div class="blockRegie mid"><?= $department['department_name'] ?></div>
+<?php
     foreach ($swimlanes as $swimlane) {
-        ?><div class="grid-container"><?php
+        ?><?php 
 
 
         $departmentId = $department['department_id'];
         $swimlaneId =$swimlane['swimlane_id'];
       $capabilities = get_capabilities_by_department_and_swimlane($mysqli, $departmentId, $swimlaneId);
-      
+     ?><div class="grid-cell"><?php
 
       foreach ($capabilities as $capability) {
         ?>
@@ -57,5 +86,14 @@ foreach ($departments as $department) {
 ?>
 
 
+<button class="btn1" onclick="history.back()">Go Back</button>
+
+<div class="sidenav">
+  <a href="addcase.php">Add: <br>case</a>
+  <a href="addcapability.php">Add: capability</a>
+  <a href="adddepartment.php">Add: department</a>
+</div>
+
+</section>
 
 </html>
