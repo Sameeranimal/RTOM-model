@@ -1,16 +1,27 @@
 
 <html>
     <link rel="stylesheet" href="grid.css">
+    <ul>
+  <li><a href="index.php">Home</a></li>
+  <li><a href="addcase.php">Add case</a></li>
+  <li><a href="addcapability.php">Add capability</a></li>
+  <li><a href="adddepartment.php">Add department</a></li>
+  <li style="float:right"><a href="#Cases">Cases</a></li>
+
+</ul>
+
   
 <?php
 
 $mysqli = include "database.php";
 
 $departments = get_departments($mysqli);
+$capabilities=get_capabilities( $mysqli);
 $swimlanes = get_swimlanes($mysqli);
+$scenarios = get_scenarios($mysqli);
+
 
 ?>
-<section class="info">
 
     <style>
         .grid-container {
@@ -85,18 +96,37 @@ foreach ($departments as $department) {
 }
 ?></div><?php
 
+
+
 ?>
+
+<div class="Cases">
+
+<h2> Cases</h2>
+
+        <?php foreach ($scenarios as $scenario): ?>
+            <p class="block probleem1 mid" style="color: black;"><?php echo $scenario ['scenario_name'] ?></p>
+        <?php endforeach ?>
+
+
+</div>
+
 
 
 
         
-<button class="btn1" onclick="history.back()">Go Back</button>
+<!-- <button class="btn1" onclick="history.back()">Go Back</button> -->
 
-<div class="sidenav">
+<!-- <div class="sidenav">
   <a href="addcase.php">Add: <br>case</a>
   <a href="addcapability.php">Add: capability</a>
   <a href="adddepartment.php">Add: department</a>
-</div>
+</div> -->
+
+
+
+
+
 
 </section>
 
