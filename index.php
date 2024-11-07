@@ -57,7 +57,6 @@ if (isset($_SESSION["user_id"])) {
     <?php endif; ?>
     </div>
 
-    <a href="grid.php">GRID</a>
 
 </body>
 </html>
