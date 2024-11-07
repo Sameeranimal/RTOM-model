@@ -29,21 +29,29 @@ body {
     
   .logout{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: small;
+    font-size: 14px;
     font-style: oblique;
     color: #fff;
-    text-align:unset;
-    margin-left: 750;
-    padding: 12;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+   
+    
     
   }
 
+.logout li{
+  list-style-type: none;
+
+}
+
   .rtom{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: xx-large;
+    font-size: large;
     font-style: oblique;
     color: #0066b2;
     text-align:unset;
+    margin: auto;
   }
 
 

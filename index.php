@@ -24,13 +24,16 @@ if (isset($_SESSION["user_id"])) {
 
     
     <link rel="stylesheet" href="index.css">
+    
+    
+    
 </head>
 <body>
 
 
 
 
-    <div class="Home">
+<div class="Home">
     
     <img src="morphens.png" width="500px" alt="">
     
@@ -44,8 +47,11 @@ if (isset($_SESSION["user_id"])) {
         <div class="rtom"><a href="RTOM.php">RTOM-Model</a></div>
 
         <div class="ns"><img src="ns.png" width="300px" alt=""></div>
+
+        <div class="logout">
+        <ul><a href="logout.php">Logout</a></li></ul>
+    </div>
         
-        <div class="logout">  <p><br><br><br><a href="logout.php">Log out</a></p></div>
         
        
         
