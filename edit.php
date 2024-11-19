@@ -55,13 +55,9 @@ $scenarios = get_scenarios($mysqli);
 </div>
 
 
-<button onclick="myFunction()" type="submit" class="delete" >Delete</button>
+<button  type="submit" class="delete" >Delete</button>
 
-<script>
-function myFunction() {
-  confirm("Are you sure you want to delete?");
-}
-</script>
+
 
 </form>
 

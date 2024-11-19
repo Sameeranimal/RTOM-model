@@ -96,3 +96,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 ?>
+
+<button class="btn1" onclick="history.back()">Go Back</button>
