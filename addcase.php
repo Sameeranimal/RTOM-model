@@ -5,16 +5,20 @@ $mysqli = require __DIR__ . "/database.php";
 $capabilities=get_capabilities( $mysqli);
 ?>
 <html>
-<body>
+<div>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="addcase.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
 
 <div class="intro">
 <h1>Capabilities list </h1>
-<h3>1.Please select all capabilities directly incfluenced by the case scenario on the left <br>
-    2.Please select all capabilities indirectly influenced by the case scenario on the right <br>
-    3.Please enter a short description of the new case scenario<br>
-    4.Submit data
+<h3><i class="fa fa-arrow-left" style="font-size:16px"></i>Please select all capabilities directly incfluenced by the case scenario on the left <br><br> 
+    Please select all capabilities indirectly influenced by the case scenario on the right <i class="fa fa-arrow-right" style="font-size:16px"></i><br><br>
+    Please enter a short description of the new case scenario and submit down below <i class="fa fa-arrow-down" style="font-size:16px" ></i><br>
+   
+    
 </h3>
 </div>
 
@@ -74,6 +78,5 @@ $capabilities=get_capabilities( $mysqli);
 
 
 <button class="btn1" onclick="history.back()">Go Back</button>
-
 </body>
 </html>

@@ -1,5 +1,6 @@
 body{
     background-image: url(yellow.png);
+    
 }
 
 
@@ -10,6 +11,7 @@ body{
     margin: 8px 0;
     box-sizing: border-box;
     margin-left: 46%;
+    
 
   }
 
@@ -62,5 +64,4 @@ button.btn1{
 
 
 
-
-    
+  

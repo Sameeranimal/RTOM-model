@@ -117,6 +117,11 @@ return $rows;
 }
 
 
+function get_capabilities_by_scenario($mysqli, $scenarioId) {
+    $sql = "SELECT c.*, sc.direct from capabilities AS c JOIN scenario_capabilities AS sc ON sc.capability_id = c.capability_id WHERE sc.scenario_id = ?";
+
+
+}
 
     
 

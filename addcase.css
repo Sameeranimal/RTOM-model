@@ -1,7 +1,11 @@
 
   body{
     background-image: url(yellow.png);
+  }
 
+
+  h3{
+    font-size: medium;
   }
 
   
@@ -35,11 +39,23 @@ button.btn1{
 
 
     .intro{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      
+
         font-size: medium;
-        text-align: center; 
         color: #1c5886;
+        border: solid #1c5886;
+        height: 210px;
+        width: 48%;
     }
     
+
+    
+
 form .form1{
 
 
@@ -63,10 +79,17 @@ form .form2{
 
     form .case{
         color: #1c5886;
+        border: solid #1c5886;
+        height: 120px;
+        width: 20%;
+        text-align: center;
+        
         position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center; 
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 form .case input{
     color: #1c5886; 
@@ -100,4 +123,5 @@ button.btn1{
     bottom: 20;
     right: 300px;
 }
+
 

@@ -27,6 +27,8 @@ if (isset($_POST ['capability_indirect'])){
     
 }
 
+
+
 $sql = "INSERT INTO scenarios (scenario_name)
         VALUES (?)";
         
@@ -84,3 +86,4 @@ if ( ! $stmt->prepare($sql)) {
 
 
 
+ 

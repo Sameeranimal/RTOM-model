@@ -6,7 +6,7 @@
   <li><a href="addcase.php">Add case</a></li>
   <li><a href="addcapability.php">Add capability</a></li>
   <li><a href="adddepartment.php">Add department</a></li>
-  <li style="float:right"><a href="#Cases">Cases</a></li>
+  <li style="float:right"><a href="edit.php">Edit</a></li>
 
 </ul>
 
