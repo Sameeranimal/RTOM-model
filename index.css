@@ -133,4 +133,42 @@ body {
   }
 
 
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa-linkedin {
+    position: absolute;
+    background: #007bb5;
+    color: white;
+    left:0;
+    top: 50%;
+
+  }
+
+
+  .fa-facebook {
+    position: absolute;
+    background: #007bb5;
+    color: white;
+    left:0;
+    top: 25%;
+
+  }
+
+  .fa-youtube {
+    position: absolute;
+    background: #007bb5;
+    color: white;
+    left:0;
+    top: 75%;
+
+  }
+
+
   
