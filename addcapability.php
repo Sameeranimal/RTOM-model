@@ -41,8 +41,7 @@ $swimlanes=get_swimlanes($mysqli);
 <input type="text" id="Capability" name="Capability" Placeholder="Enter Capability name" ><br>
 
 <h3>4.Description</h3>
-<input type="text" id="Description" name="Description" Placeholder="Add short description" ><br>
-
+<textarea id="Description" name="Description" Placeholder="Add short description" ></textarea><br> 
    
 <input type="Submit" value="Submit">
 </div>
