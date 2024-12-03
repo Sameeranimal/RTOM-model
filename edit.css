@@ -1,44 +1,4 @@
-.Departments{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: auto;
-    
 
-      font-size: medium;
-      color: #1c5886;
-      border: solid #1c5886;
-      height: 210px;
-      width: 20%;
-    }
-
-  
-
-    .Capabilities{
-        position: absolute;
-        top: 0;
-        left: 307px;
-        margin: auto;
-        
-  
-          font-size: medium;
-          color: #1c5886;
-          border: solid #1c5886;
-          width: 20%;
-    }
-.Cases{
-    position: absolute;
-    top: 210px;
-   left: 0;
-    margin: auto;
-    
-
-      font-size: medium;
-      color: #1c5886;
-      border: solid #1c5886;
-      height: 210px;
-      width: 20%;
-}
 ul {
     list-style-type: none;
     margin: 0;
@@ -64,8 +24,7 @@ ul {
   }
 
   .delete{
-    position: absolute;
-    left: 50%;
+   
     background-color: red;
     border: none;
     color: white;
@@ -86,3 +45,58 @@ ul {
     border: solid 1px red;
   }
 
+.deleteform{
+  float: left;
+
+  display: block;
+  color: #1c5886;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.editform{
+  float: right;
+
+  display: block;
+  color: #1c5886;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.edit{
+  background-color: #00468b;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.edit:hover{
+  background-color: white;
+  color: #00468b;
+  border: solid 1px #00468b;
+}
+
+.capability{
+border: solid  1px black;
+text-align: left;
+}
+
+.department{
+  border: solid  1px black;
+text-align: left;
+}
+
+.case{
+  border: solid  1px black;
+text-align: left;
+}
