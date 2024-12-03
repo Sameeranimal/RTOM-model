@@ -8,19 +8,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST)) {
     // var_dump($_POST);
     
     $capabilityName = trim($_POST['Capability']);
-    
-    if (empty($capabilityName)) {
-        die("Capability name cannot be empty.");
+    $description = trim($_POST['Description']);
+
+    if (empty($capabilityName)|| empty($description)) {
+        die("Capability name/ description name cannot be empty.");
     }
 
-    $sql = "INSERT INTO capabilities (capability_name) VALUES (?)";
+    $sql = "INSERT INTO capabilities (capability_name, capability_descript) VALUES (?, ?)";
     $stmt = $mysqli->stmt_init();
 
     if (!$stmt->prepare($sql)) { 
         die("SQL error: " . $mysqli->error);
     }
+   
+    $stmt->bind_param("ss", $capabilityName, $description);
+   
 
-    $stmt->bind_param("s", $capabilityName);
 
     if ($stmt->execute()) {
         $capabilityId = $stmt->insert_id; 

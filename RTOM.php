@@ -86,7 +86,7 @@ foreach ($departments as $department) {
 
       foreach ($capabilities as $capability) {
         ?>
-            <div class="blockInfo"><?= $capability['capability_name'] ?></div>
+<div class="blockInfo" title="<?= htmlspecialchars($capability['capability_descript']) ?>"><?= $capability['capability_name'] ?></div>
         <?php
       } 
 
